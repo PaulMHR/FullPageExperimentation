@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+	<script src="./fullPage.js-master/dist/jquery.fullPage.js"></script>
+	
+	<script src="./jquery/dist/jquery.min.js"></script>
+	<script src="./fullPage.js-master/dist/jquery.fullPage.js"></script>
+	<link rel="stylesheet" type="text/css" href="./fullPage.js-master/dist/jquery.fullPage.css" />
+		
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				anchors:['firstPage', 'secondPage']
+			});
+		});
+	</script>
+	</head>
+	
+	<body>
+	
+		<ul id="menu">
+			<li datamenu-anchor="#firstPage">
+				<a href="#firstPage">First section</a>
+			</li>
+			<li datamenu-anchor="#secondPage">
+				<a href="#secondPage">Second section</a>
+			</li>
+		</ul>
+		
+		<div id="fullpage">
+			<div class="section" data-anchor="firstPage" style="height: 264px;">
+				First Page!
+				<br>
+			</div>
+			<div class="section" data-anchor="secondPage" style="height: 264px;">
+				Second Page!
+				<br>
+			</div>
+		</div>
+	
+	</body>
+
+</html>
