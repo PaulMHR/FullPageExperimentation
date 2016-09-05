@@ -16,9 +16,25 @@
 		</script>
 
 		<style>
+			body {
+				font-family: "Helvetica Neue";
+			}
+			h1, p {
+				text-align: center;
+			}
 			#menu{
 				position:fixed;
 				z-index: 70;
+			}
+			#menu li {
+				display:inline-block;
+				margin:15px;
+				color: #000;
+				border-radius: 10px;
+			}
+			#menu li a {
+				text-decoration:none;
+				color: #000;
 			}
 		</style>
 	</head>
@@ -43,7 +59,7 @@
 				<p>Also notice how the URL changes with the page.</p>
 				<br>
 			</div>
-			<div class="section" data-anchor="secondPage">
+			<div class="section active" data-anchor="secondPage">
 				<h1>Second Page!</h1>
 				<p>This website is set to load the second page automatically. Try scrolling or using the navbar
 				to reach the first page.</p>
