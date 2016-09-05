@@ -1,45 +1,62 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	
-	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-	<script src="./fullPage.js-master/dist/jquery.fullPage.js"></script>
-	
-	<script src="./jquery/dist/jquery.min.js"></script>
-	<script src="./fullPage.js-master/dist/jquery.fullPage.js"></script>
-	<link rel="stylesheet" type="text/css" href="./fullPage.js-master/dist/jquery.fullPage.css" />
-		
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$('#fullpage').fullpage({
-				anchors:['firstPage', 'secondPage']
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.6/jquery.fullPage.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.6/jquery.fullPage.css" />
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('#fullpage').fullpage({
+					sectionsColor: ['#f2f2f2', '#4BBFC3'],
+					anchors:['firstPage', 'secondPage'],
+					menu: '#menu'
+				});
 			});
-		});
-	</script>
+		</script>
+
+		<style>
+			#menu{
+				position:fixed;
+				z-index: 70;
+			}
+		</style>
 	</head>
-	
+
 	<body>
-	
+
 		<ul id="menu">
-			<li datamenu-anchor="#firstPage">
+			<li data-menuanchor="#firstPage">
 				<a href="#firstPage">First section</a>
 			</li>
-			<li datamenu-anchor="#secondPage">
+			<li data-menuanchor="#secondPage">
 				<a href="#secondPage">Second section</a>
 			</li>
+			<li data-menuanchor="#thirdPage">
+				<a href="#thirdPage">Third section</a>
+			</li>
 		</ul>
-		
+
 		<div id="fullpage">
-			<div class="section" data-anchor="firstPage" style="height: 264px;">
-				First Page!
+			<div class="section" data-anchor="firstPage">
+				<h1>First Page!</h1>
+				<p>Also notice how the URL changes with the page.</p>
 				<br>
 			</div>
-			<div class="section" data-anchor="secondPage" style="height: 264px;">
-				Second Page!
+			<div class="section" data-anchor="secondPage">
+				<h1>Second Page!</h1>
+				<p>This website is set to load the second page automatically. Try scrolling or using the navbar
+				to reach the first page.</p>
+				<br>
+			</div>
+			<div class="section" data-anchor="thirdPage">
+				<h1>Third Page!</h1>
+				<p>All changes in URL after the first '#' are tied to the page's data-anchor attribute. Check them
+				out in the website's source code!</p>
 				<br>
 			</div>
 		</div>
-	
+
 	</body>
 
 </html>
